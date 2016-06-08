@@ -1,0 +1,38 @@
+style.csshtml, body{
+	margin:0px;
+	padding: 0px;
+}
+.green{
+	width: 340px;
+	height: 450px;
+	margin-top:80px;
+	margin-left: 550px;
+	background-color: #0CB68B;
+	box-shadow: 0px 0px 25px #888888;
+	/*position: absolute;
+	top:80px;
+	left: 550px;*/
+}
+h1{
+	color:white;
+	padding-top: 40px;
+	padding-left: 20px;
+}
+.form{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top:30px;
+}
+
+.submit{
+	width: 305px;
+	font-size:20px; 
+	color:#0CB68B;
+	margin: 20px ;
+	padding: 5px;
+}
+p{
+	margin: 30px 10px;
+	color: white;
+	font-size: 20px;
+}
