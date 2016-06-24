@@ -81,34 +81,44 @@ Licence URI: http://www.os-templates.com/template-terms
         <ul id="featurednews">
 
 <?php 
-include("database.php");
+
+include("admin/database.php");
 $sql="select * from news limit 5";
 $query=mysqli_query($connect,$sql);
+
+while($row=mysqli_fetch_assoc($query)){
  ?>
 
-<?php  while ($row=mysqli_fetch_assoc($query)){ ?>
-          <li><img src="<?php  echo $row['img']?>" />
+          <li><img src="image/<?php  echo $row["img"];  ?>" alt="" />
             <div class="panel-overlay">
-              <h2><?php  echo $row["title"]?></h2>
-              <p><?php  echo $row["body"]?><br />
+              <h2><?php  echo $row["title"];  ?> </h2>
+              <p><?php  echo $row["body"];  ?> .<br />
                 <a href="#">Continue Reading &raquo;</a></p>
             </div>
           </li>
+          <?php }?>
 
-<?php } ?>
+<?php 
 
+include("admin/database.php");
+$sql="select * from news limit 3";
+$query=mysqli_query($connect,$sql);
+
+while($row=mysqli_fetch_assoc($query)){
+ ?>
+
+         
         </ul>
       </div>
     </div>
     <div class="column">
       <ul class="latestnews">
-
-      <?php  while ($row=mysqli_fetch_assoc($query)){ ?>
-
-        <li><img src="<?php echo $row['img'] ?>" alt="" />
-          <p><strong><a href="#"><?php  echo $row["title"]?>.</a></strong> <?php  echo $row["body"]?></p>
+        <li><img src="image/<?php  echo $row["img"];  ?>" alt="" />
+          <p><strong><a href="#"><?php  echo $row["title"];  ?></a></strong> <?php  echo $row["body"];  ?> </p>
         </li>
         
+<?php } ?>
+
       </ul>
     </div>
     <br class="clear" />
@@ -157,21 +167,21 @@ $query=mysqli_query($connect,$sql);
       <div id="hpage_latest">
         <h2>Feugiatrutrum rhoncus semper</h2>
         <ul>
-<?php 
-include("database.php");
-$sql="select * from news limit 3";
-$query=mysqli_query($connect,$sql);
- ?>
-
- <?php  while ($row=mysqli_fetch_assoc($query)){ ?>
-
           <li><img src="images/demo/190x130.gif" alt="" />
-            <p><?php  echo $row["title"]?>.</p>
-            <p><?php  echo $row["body"]?>.</p>
+            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
+            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et.</p>
             <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
           </li>
-          
-
+          <li><img src="images/demo/190x130.gif" alt="" />
+            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
+            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et.</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </li>
+          <li class="last"><img src="images/demo/190x130.gif" alt="" />
+            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
+            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et.</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </li>
         </ul>
         <br class="clear" />
       </div>

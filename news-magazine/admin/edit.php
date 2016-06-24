@@ -1,7 +1,7 @@
 <?php 
 include "database.php";
 $id=$_GET["id"];
-$sql="select * from news where id=$id";
+$sql="SELECT * from news where id=$id";
 $query=mysqli_query($connect,$sql);
 $row=mysqli_fetch_assoc($query);
 
